@@ -50,8 +50,7 @@ class Song
     name = filename.split(/[-.]/).map(&:strip)
     # artist = Artist.find_or_create_by_name(name[0])
     # genre = Genre.find_or_create_by_name(name[2])
-    test = Song.new(name[1], name[0], name[2])
-    test.artist = name[0]
+    self.new(name[1], name[0], name[2])
   end
 
   def self.create_from_filename(filename)
